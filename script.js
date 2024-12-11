@@ -1,6 +1,10 @@
 /* ----- NAVIGATION BAR FUNCTION ----- */
 function myMenuFunction(){
     var menuBtn = document.getElementById("myNavMenu");
+    const menu = document.getElementById('myNavMenu');
+    menu.classList.toggle('active');
+    const navMenu = document.getElementById("myNavMenu");
+    navMenu.style.display = navMenu.style.display === "block" ? "none" : "block";
 
     if(menuBtn.className === "nav-menu"){
       menuBtn.className += " responsive";
@@ -66,7 +70,6 @@ sr.reveal('.top-header',{})
 
 /* ----- ## -- SCROLL REVEAL LEFT_RIGHT ANIMATION -- ## ----- */
 
-/* -- ABOUT INFO & CONTACT INFO -- */
 const srLeft = ScrollReveal({
   origin: 'left',
   distance: '80px',

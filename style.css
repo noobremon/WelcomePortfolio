@@ -64,8 +64,10 @@ html{
     margin-left: 10px;
 }
 .btn:hover{
-    background: var(--second-color);
-    color: var(--color-white);
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+    transform: translateY(-2px); 
 }
 
 /* ----- GLOBAL ICONS DESIGN ----- */
@@ -112,6 +114,7 @@ nav{
 }
 .nav-menu, .nav_menu_list{
     display: flex;
+    /* position: absolute; */
 }
 .nav-menu .nav_list{
     list-style: none;
@@ -955,5 +958,78 @@ footer{
     }
     .input-field{
         width: 100%;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    animation: fadeIn 1s ease-in-out;
+}
+@media (max-width: 1024px) {
+    .nav-menu {
+        display: none;
+    }
+    .nav-menu-btn {
+        display: block;
+        font-size: 1.5em;
+    }
+
+    #header {
+        flex-wrap: wrap;
+    }
+
+    .featured-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-text {
+        font-size: 0.9em;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .form-control {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-logo {
+        font-size: 1.2em;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        font-size: 0.8em;
+    }
+
+    .featured-text-info, .featured-text-card {
+        font-size: 0.8em;
+    }
+
+    footer {
+        font-size: 0.8em;
     }
 }
